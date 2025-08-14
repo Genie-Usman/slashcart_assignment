@@ -1,0 +1,17 @@
+/* Newsletter Section */
+.newsletter-container { width: 100%; height: 380px; background-color: #E0E1DA; padding: 40px; text-align: center; margin-top: 40px; }
+.newsletter-heading { font-size: 70px; font-weight: 400; color: #0A0A09; letter-spacing: -2.8px; margin-top: 30px; margin-bottom: 10px; }
+.newsletter-subheading { font-size: 18px; color: #0A0A09; line-height: 1.6; margin-bottom: 40px; }
+.newsletter-form { display: flex; width: 100%; max-width: 530px; margin: 0 auto; }
+.newsletter-input { flex-grow: 1; padding: 15px 20px; border: 1px solid black; background-color: transparent; border-top-left-radius: 50px; border-bottom-left-radius: 50px; font-size: 1rem; outline: none; margin: 0px auto; }
+.newsletter-input:focus { border-color: black; }
+.newsletter-input::placeholder { color: #0A0A09; font-size: 14px; font-weight: 400; }
+.newsletter-button { padding: 0 25px; background-color: #0A0A09; border: none; border-top-right-radius: 50px; border-bottom-right-radius: 50px; cursor: pointer; }
+.newsletter-button img { width: 31px; height: 55px; }
+
+@media (max-width: 768px) {
+  .newsletter-container { padding: 30px 15px; }
+}
+@media (max-width: 480px) { .newsletter-heading { letter-spacing: -0.5px; } }
+
+

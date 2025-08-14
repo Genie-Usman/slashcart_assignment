@@ -1,0 +1,116 @@
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 30px;
+    background: transparent;
+    transition: 0.4s ease;
+}
+
+.navbar::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background: #F6F8F2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+    z-index: 60;
+    pointer-events: none;
+}
+
+.navbar:hover::after {
+    width: 100%;
+    background: black;
+}
+
+.navbar:hover {
+    background-color: #F6F8F2;
+    transition: 0.4s ease-in-out;
+}
+
+.navbar:hover .nav-logo img { filter: invert(); z-index: 1000; }
+.navbar:hover .navbar-links { color: #000000; }
+.navbar:hover .navbar-links img { filter: invert(1); }
+
+.icon-1, .icon-2, .icon-3, .icon-4 { display: inline-block; transition: transform 0.3s ease; }
+.nav-item:hover .icon-1, .nav-item:hover .icon-2, .nav-item:hover .icon-3, .nav-item:hover .icon-4 { transform: rotate(180deg); }
+
+.nav-left, .nav-right { display: flex; align-items: center; }
+.nav-left { gap: 25px; }
+.nav-right { gap: 40px; }
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left a img, .nav-right a img { top: 2px; position: relative; }
+
+.nav-logo img { height: 57px; width: 176px; position: relative; z-index: 90; }
+
+.nav-icons { display: flex; align-items: center; gap: 16px; position: relative; left: 4%; }
+.nav-icons img { width: 35px; color: white; height: 100px; object-fit: contain; z-index: 60; }
+.navbar:hover .nav-icons img { filter: invert(1); }
+
+@media screen and (max-width: 768px) { .navbar { display: none; } }
+
+/* Dropdowns under navbar */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #F6F8F2;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    pointer-events: none;
+    z-index: 40;
+    display: flex;
+    padding: 0rem 13rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    gap: 2rem;
+}
+
+.nav-item:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+
+.promo-column { flex: 1; }
+.promo-column h2 { font-size: 19px; font-weight: 700; color: #0A0A09; margin-bottom: 1rem; }
+.promo-column a { display: block; padding: 0.5rem 0; color: #0A0A09B2; font-size: 1rem; font-weight: 400; margin-top: 10px; transition: all 0.2s; }
+.promo-column a:hover { color: #0A0A09; text-decoration: underline; font-weight: 500; text-underline-offset: 10px; }
+
+.products-column { flex: 2; display: flex; gap: 1rem; }
+.christmas-card { flex: 1; border-radius: 0.5rem; overflow: hidden; }
+.christmas-card img { width: 375px; height: 260px; display: block; border-radius: 0.5rem; }
+.christmas-card-body { padding: 1rem 0; text-align: center; }
+.christmas-card-body h3 { font-size: 18px; font-weight: 700; color: #000000; }
+.christmas-card-body p { font-size: 14px; font-weight: 400; color: #000000; margin-top: 0.25rem; }
+
+@media (max-width: 1280px) {
+  .dropdown-menu { padding: 0rem 4rem; }
+}
+@media (max-width: 1024px) {
+  .dropdown-menu { padding: 0rem 2rem; }
+  .christmas-card img { width: 100%; height: auto; }
+}
+
+

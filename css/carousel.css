@@ -1,0 +1,87 @@
+/* ===== Universal Carousel (UC) ===== */
+.uc-carousel {
+  --uc-gap: 16px;
+  --uc-gap-mobile: 0px;
+  --uc-items: 1;                 /* mobile-first default */
+  --uc-btn-bg: rgba(0,0,0,.6);
+  --uc-btn-color: #fff;
+  --uc-dot: #c9c9c9;
+  --uc-dot-active: #111;
+  position: relative;
+  width: 100%;
+}
+
+/* Responsive fallback (works even before JS) */
+@media (min-width: 769px)  { .uc-carousel { --uc-items: 2; } }
+@media (min-width: 1025px) { .uc-carousel { --uc-items: 3; } }
+@media (min-width: 1281px) { .uc-carousel { --uc-items: 5; } }
+
+.uc-viewport {
+  overflow: hidden;
+  width: 100%;
+  touch-action: pan-y;           /* smooth vertical scroll while allowing horizontal swipe */
+}
+
+.uc-track {
+  display: flex;
+  gap: var(--uc-gap);
+  will-change: transform;
+  transition: transform .45s ease;
+}
+
+.uc-slide {
+  flex: 0 0 calc((100% - (var(--uc-gap) * (var(--uc-items) - 1))) / var(--uc-items));
+  box-sizing: border-box;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-up reveal for currently visible slides */
+.uc-carousel[data-anim="fade-up"] .uc-slide {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.uc-carousel[data-anim="fade-up"] .uc-slide.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.uc-slide img { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+/* Buttons */
+.uc-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--uc-btn-bg);
+  color: var(--uc-btn-color);
+  border: 0;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  cursor: pointer; z-index: 2;
+}
+.uc-prev { left: 8px; }
+.uc-next { right: 8px; }
+.uc-btn:disabled { opacity: .4; cursor: default; }
+
+/* Bigger hit targets on phones */
+@media (max-width: 480px) {
+  .uc-btn { width: 44px; height: 44px; }
+  /* .uc-track {gap: var(--uc-gap-mobile);} */
+  .uc-slide img { width: 80%; margin: auto;}
+}
+
+/* Dots */
+.uc-dots { display: flex; gap: 8px; justify-content: center; margin-top: 14px; }
+.uc-dots button {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.uc-dots button.is-active { background: var(--uc-dot-active); }

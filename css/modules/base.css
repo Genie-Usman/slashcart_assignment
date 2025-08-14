@@ -1,0 +1,38 @@
+/* Base & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    background-color: #F6F8F2;
+}
+
+/* Generic Buttons */
+.button-outline {
+    width: 140px;
+    height: 40px;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid #F5F5F5;
+    color: #F5F5F5;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.5s;
+    margin-top: 40px;
+}
+
+.button-outline:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+    cursor: pointer;
+}
+
+

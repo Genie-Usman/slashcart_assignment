@@ -1,0 +1,292 @@
+.hamburger-icon {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+}
+
+
+/* --- TABLET STYLES --- */
+/* For screens between 768px and 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0px 20px; /* Adjust padding for tablets */
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 15px; /* Reduce the gap between navigation items */
+  }
+
+  .nav-left a,
+  .nav-right a {
+    font-size: 14px; /* Slightly decrease font size for better fit */
+    gap: 5px; /* Reduce gap between text and icons */
+  }
+
+  .nav-logo img {
+    height: 45px; /* Decrease logo size */
+    width: 140px;
+  }
+
+  .nav-icons {
+    gap: 12px; /* Reduce the gap between icons */
+    left: 2%; /* Adjust icon position if needed */
+  }
+
+  .nav-icons img {
+    width: 30px; /* Decrease icon size */
+  }
+}
+
+/* --- MOBILE STYLES --- */
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* logo left, hamburger right */
+        padding: 10px 20px;
+        flex-wrap: nowrap; /* keep on one line */
+    }
+
+    /* Hide desktop nav links */
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    /* Logo adjustments */
+    .nav-logo {
+        order: 1; /* stay on left */
+    }
+
+    .nav-logo img {
+        height: 40px;
+        width: auto;
+    }
+
+    /* Remove decorative line on mobile */
+    .navbar::after {
+        display: none;
+    }
+
+    /* Remove hover effects for mobile */
+    .navbar:hover {
+        background-color: transparent;
+    }
+
+    .navbar:hover::after,
+    .navbar:hover .nav-logo img,
+    .navbar:hover .navbar-links,
+    .navbar:hover .navbar-links img,
+    .navbar:hover .nav-icons img {
+        filter: none;
+        background-color: transparent;
+    }
+
+    /* Hamburger Menu Button */
+    .menu-toggle {
+        order: 2; /* stay on right */
+        display: block;
+        cursor: pointer;
+        z-index: 100;
+        background: none;
+        border: none;
+    }
+
+    .menu-toggle img {
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+    }
+
+    .hamburger-icon {
+    display: flex;
+}
+
+    /* Mobile Menu Styles */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 9999;
+    }
+
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+
+    .mobile-menu a {
+        color: #000000;
+        font-size: 24px;
+        padding: 15px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="insta-grid">
+                <!-- Image 1 -->
+                <div class="insta-grid-item">
+                    <img src="assets/images/insta_1.png" alt="Instagram image of coffee" />
+                    <a href="#" class="insta-image-overlay">
+                        <img src="assets/icons/instagram.svg" alt="Insta Icon">
+                    </a>
+                </div>
+                <!-- Image 2 -->
+                <div class="insta-grid-item">
+                    <img src="assets/images/insta_2.png" alt="Instagram image of coffee" />
+                    <a href="#" class="insta-image-overlay">
+                        <img src="assets/icons/instagram.svg" alt="Insta Icon">
+                    </a>
+                </div>
+                <!-- Image 3 -->
+                <div class="insta-grid-item">
+                    <img src="assets/images/insta_3.png" alt="Instagram image of coffee" />
+                    <a href="#" class="insta-image-overlay">
+                        <img src="assets/icons/instagram.svg" alt="Insta Icon">
+                    </a>
+                </div>
+                <!-- Image 4 -->
+                <div class="insta-grid-item">
+                    <img src="assets/images/insta_4.png" alt="Instagram image of coffee" />
+                    <a href="#" class="insta-image-overlay">
+                        <img src="assets/icons/instagram.svg" alt="Insta Icon">
+                    </a>
+                </div>
+                <!-- Image 5 -->
+                <div class="insta-grid-item">
+                    <img src="assets/images/insta_5.png" alt="Instagram image of coffee" />
+                    <a href="#" class="insta-image-overlay">
+                        <img src="assets/icons/instagram.svg" alt="Insta Icon">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carousel navigation dots -->
+            <div class="carousel-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+
+
+
+
+
+
+
+              <div class="testimonial-cards">
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <!-- Star SVG (repeated 5 times for a 5-star rating) -->
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                    </div>
+                    <h3 class="review-headline">All i can say is wow</h3>
+                    <p class="review-text">The coffee Cometeeer experience is incredible. It's having a high end cup of
+                        coffee from a boutique coffee shop at my fingertips</p>
+                    <p class="reviewer-name">Michel F.</p>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <!-- Star SVG (repeated 5 times for a 5-star rating) -->
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                    </div>
+                    <h3 class="review-headline">All i can say is wow</h3>
+                    <p class="review-text">The coffee Cometeeer experience is incredible. It's having a high end cup of
+                        coffee from a boutique coffee shop at my fingertips</p>
+                    <p class="reviewer-name">Michel F.</p>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <!-- Star SVG (repeated 5 times for a 5-star rating) -->
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                        <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" />
+                        </svg>
+                    </div>
+                    <h3 class="review-headline">All i can say is wow</h3>
+                    <p class="review-text">The coffee Cometeeer experience is incredible. It's having a high end cup of
+                        coffee from a boutique coffee shop at my fingertips</p>
+                    <p class="reviewer-name">Michel F.</p>
+                </div>
+            </div>
