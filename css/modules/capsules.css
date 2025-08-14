@@ -1,47 +1,242 @@
 /* Shop Capsules */
-.capsule-container { display: flex; background-color: #E0E1DA; width: 100%; padding: 0px 40px; }
-.left-panel { max-width: 40%; flex: 1; margin-left: 30px; padding-right: 40px; margin-top: 150px; }
-.right-panel { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; }
-.right-panel img { width: 100%; max-width: 600px; height: auto; border-radius: 10px; margin-top: -82px; }
-.right-panel .nav-dots { position: absolute; right: 95px; top: 45%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; }
-.clifton-capsules-h1 { font-size: 70px; font-weight: 400; color: #0A0A09; letter-spacing: -2.8px; }
-.clifton-capsules-p { font-size: 17px; font-weight: 400; color: #0A0A09; line-height: 21px; margin-top: 20px; margin-bottom: 30px; }
-.read-more-btn { display: inline-block; padding: 12px 25px; border: 1px solid #000; color: #000; text-decoration: none; border-radius: 100px; transition: background-color 0.3s, color 0.3s; }
-.read-more-btn:hover { background-color: #000; color: #fff; }
-.clifton-coffee { margin-top: 50px; }
-.clifton-coffee h2 { color: #0A0A0933; font-size: 70px; margin-bottom: 10px; letter-spacing: -2.8px; font-weight: 400; }
-.clifton-coffee p { color: #0A0A0933; font-size: 15px; font-weight: 400; line-height: 21px; }
+.capsule-container {
+  display: flex;
+  background-color: #E0E1DA;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.left-panel {
+  max-width: 40%;
+  flex: 1;
+  margin-left: 30px;
+  padding-right: 40px;
+  margin-top: 150px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.right-panel img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: -82px;
+}
+
+.right-panel .nav-dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  right: 25px;
+}
+
+.clifton-capsules-h1 {
+  font-size: 70px;
+  font-weight: 400;
+  color: #0A0A09;
+  letter-spacing: -2.8px;
+}
+
+.clifton-capsules-p {
+  font-size: 17px;
+  font-weight: 400;
+  color: #0A0A09;
+  line-height: 21px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.clifton-coffee {
+  margin-top: 50px;
+}
+
+.clifton-coffee h2 {
+  color: #0A0A0933;
+  font-size: 70px;
+  margin-bottom: 10px;
+  letter-spacing: -2.8px;
+  font-weight: 400;
+}
+
+.clifton-coffee p {
+  color: #0A0A0933;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+}
 
 @media (max-width: 1024px) {
-  .capsule-container { padding: 0px 20px; }
-  .left-panel { max-width: 50%; margin-left: 20px; padding-right: 20px; margin-top: 100px; }
-  .clifton-capsules-h1 { font-size: 55px; }
-  .right-panel img { max-width: 500px; margin-top: -40px; }
-  .right-panel .nav-dots { right: 40px; }
+  .capsule-container {
+    padding: 0px 20px;
+  }
+
+  .left-panel {
+    max-width: 50%;
+    margin-left: 20px;
+    padding-right: 20px;
+    margin-top: 100px;
+  }
+
+  .clifton-capsules-h1 {
+    font-size: 55px;
+  }
+
+  .right-panel img {
+    max-width: 500px;
+    margin-top: -40px;
+  }
+
+  .right-panel .nav-dots {
+    right: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .right-panel {
+    flex-direction: column;
+  }
+
+  .right-panel .nav-dots {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .right-panel .nav-dots .dot {
+    width: clamp(8px, 0.9vw, 12px);
+    height: clamp(8px, 0.9vw, 12px);
+  }
 }
 
 @media (max-width: 768px) {
-  .capsule-container { align-items: center; padding: 40px 20px; }
-  .left-panel { max-width: 100%; margin-left: 0; padding-right: 0; margin-top: 0; text-align: center; }
-  .clifton-capsules-h1 { font-size: 45px; letter-spacing: -2px; }
-  .clifton-capsules-p { font-size: 16px; line-height: 22px; margin: 15px auto 25px auto; max-width: 500px; }
-  .right-panel { margin-top: 30px; max-width: 100%; width: 100%; }
-  .right-panel img { max-width: 450px; margin-top: 0; }
-  .right-panel .nav-dots { position: static; flex-direction: row; justify-content: center; gap: 8px; margin-top: 10px; }
+  .capsule-container {
+    align-items: center;
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-panel {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .clifton-capsules-h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .clifton-capsules-p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 15px auto 25px auto;
+    max-width: 500px;
+  }
+
+  .right-panel {
+    margin-top: 30px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .right-panel img {
+    max-width: 450px;
+    margin-top: 0;
+  }
+
+  .right-panel .nav-dots {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 480px) {
-  .clifton-capsules-h1 { font-size: 34px; letter-spacing: -1.5px; }
-  .clifton-capsules-p { font-size: 15px; line-height: 20px; margin-bottom: 20px; }
-  .read-more-btn { padding: 10px 20px; font-size: 14px; }
-  .clifton-coffee h2 { font-size: 45px; letter-spacing: -1.5px; }
-  .right-panel img { display: none; }
-  .dot { height: 5px; width: 5px; }
+  .capsule-container {
+    padding: 24px 16px;
+  }
+
+  .clifton-capsules-h1 {
+    font-size: 34px;
+    letter-spacing: -1.5px;
+  }
+
+  .clifton-capsules-p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .read-more-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .clifton-coffee h2 {
+    font-size: 45px;
+    letter-spacing: -1.5px;
+  }
+
+  .right-panel img {
+    display: none;
+  }
+
+  .right-panel .nav-dots {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .right-panel .nav-dots .dot {
+    height: 10px;
+    width: 10px;
+  }
 }
 
 @media (max-width: 375px) {
-  .clifton-capsules-h1 { font-size: 28px; }
-  .clifton-coffee h2 { font-size: 38px; }
+  .clifton-capsules-h1 {
+    font-size: 28px;
+  }
+
+  .clifton-coffee h2 {
+    font-size: 38px;
+  }
 }
-
-

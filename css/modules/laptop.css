@@ -1,0 +1,102 @@
+/* Laptop-specific responsive tweaks */
+
+@media screen and (max-width: 1366px) {
+
+    /* Hero */
+    .home-h2 {
+        font-size: 72px;
+        letter-spacing: -2px;
+    }
+
+    /* Collections */
+    .h2-collection {
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+
+    .collection-stage {
+        max-width: 1200px;
+    }
+
+    /* New products */
+    .header-section h2 {
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+
+    .main-content {
+        padding: 3rem;
+    }
+
+    .image-item-2 {
+        height: 460px;
+    }
+
+    .new-product-card {
+        height: 480px;
+    }
+
+    /* Collage cards */
+    .collage-container {
+        flex-wrap: nowrap;
+        gap: 16px;
+        padding: 0 32px;
+    }
+
+    .collage-card {
+        width: calc(100% - 12px);
+        height: 380px;
+    }
+
+    .collage-card-text-overlay h1 {
+        font-size: 48px;
+    }
+
+    .collage-card-text-overlay .collage-card-text,
+    .collage-card-text-overlay .collage-card-subtext {
+        font-size: 16px;
+    }
+
+    /* Capsules */
+    .capsule-container {
+        padding: 0 24px;
+    }
+
+    .left-panel {
+        margin-top: 120px;
+    }
+
+    .clifton-capsules-h1 {
+        font-size: 56px;
+    }
+
+    .right-panel img {
+        max-width: 560px;
+    }
+
+    /* Tours */
+    .virtual-tours-container {
+        padding: 40px;
+        gap: 24px;
+    }
+
+    .virtual-tours-text h1 {
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+
+    /* Testimonials */
+    .testimonial-container h1 {
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+
+       /* Favourites */
+       .product-info {
+        gap: 10px;
+      }
+
+      .product-info .label-border {
+        width: 60px;
+      }
+}
