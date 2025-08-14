@@ -1,6 +1,6 @@
 ### SlashCart Assignment
 
-- Made in plain HTML5,CSS3 and JS
+- Made in plain HTML5,CSS3 and JS as required by the assignment's guideline
 - Used Swiperjs library for sliders
 
 ### Note
